@@ -1,3 +1,18 @@
+Made some changes to work with my Orange Pi PC based NAS server
+
+The data is output in this format:
+
+12:34:56
+IP:192.168.1.76
+D1:916G/735G
+D2:916G/749G
+T:24.5C
+R:488M/500M
+
+
+
+
+
 # OrangePI_OLED
 Add OLED display with sys info to your Orange PI board
 
