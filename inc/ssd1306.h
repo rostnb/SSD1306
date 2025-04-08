@@ -15,7 +15,9 @@
 #define SSD1306_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C" 
+extern int bus; // I2C bus descriptor
+extern FONT_INFO *_font; // Font descriptor
 #endif
 
 #include <math.h>
@@ -104,11 +106,11 @@ void        ssd1306DrawString( int16_t, int16_t, int8_t * , uint8_t, uint16_t, u
 //void        ssd1306ShiftFrameBuffer( uint16_t height, uint16_t direction);
 void        ssd1306MixFrameBuffer(void);
 
-void i2c_write( uint8_t addr, 
-                uint8_t * value, 
-                int nbytes);
-int i2c_init(char * bus, int addr);
+void i2c_write(uint8_t addr, uint8_t *value, int nbytes);
+int i2c_init(char *bus, int addr);
 
+extern int bus; // I2C bus descriptor
+extern FONT_INFO *_font; // Font descriptor
 
 #ifdef __cplusplus
 }
